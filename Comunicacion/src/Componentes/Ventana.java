@@ -4,13 +4,18 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 
 import javax.annotation.processing.SupportedOptions;
+import javax.sound.sampled.SourceDataLine;
 import javax.swing.JFrame;
 import javax.swing.event.MouseInputListener;
 
 import org.w3c.dom.events.MouseEvent;
 
 public class Ventana extends JFrame {
+   static int n=0;
+   int numero;
     public Ventana() {
+        n++;
+        this.numero=n;
         Toolkit pantalla = getToolkit();
         Dimension tamanio = pantalla.getScreenSize();
         int altura = tamanio.height;
@@ -18,14 +23,13 @@ public class Ventana extends JFrame {
         setSize(anchura / 2, altura / 2);
         setLocationRelativeTo(null);
 
-        this.setTitle("ventana 1");
+        this.setTitle("ventana " + numero);
         this.setVisible(true);
-
         MouseInputListener l = new MouseInputListener() {
 
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
-                System.out.println("Ratón en ventana 1");
+                System.out.println("Ratón en ventana " + numero);
 
             }
 
