@@ -1,11 +1,8 @@
 package Componentes;
 
-
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
-import java.awt.event.MouseAdapter ;
-import java.awt.event.MouseListener;
 import javax.annotation.processing.SupportedOptions;
 import javax.sound.sampled.SourceDataLine;
 import javax.swing.JFrame;
@@ -13,7 +10,7 @@ import javax.swing.event.MouseInputListener;
 
 import org.w3c.dom.events.MouseEvent;
 
-public class Ventana extends JFrame implements MouseListener{
+public class Ventana extends JFrame {
    static int n=0;
    int numero;
     public Ventana() {
@@ -29,7 +26,7 @@ public class Ventana extends JFrame implements MouseListener{
         this.setTitle("ventana " + numero);
         this.setVisible(true);
         MouseInputListener l = new MouseInputListener() {
-/*
+
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
                 System.out.println("Ratón en ventana " + numero);
@@ -70,7 +67,7 @@ public class Ventana extends JFrame implements MouseListener{
             public void mouseMoved(java.awt.event.MouseEvent e) {
                 // TODO Auto-generated method stub
 
-            }*/
+            }
 
         };
         addMouseListener(l);
