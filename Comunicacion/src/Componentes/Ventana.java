@@ -11,11 +11,12 @@ import javax.swing.event.MouseInputListener;
 import org.w3c.dom.events.MouseEvent;
 
 public class Ventana extends JFrame {
-   static int n=0;
-   int numero;
+    static int n = 0;
+    int numero;
+
     public Ventana() {
         n++;
-        this.numero=n;
+        this.numero = n;
         Toolkit pantalla = getToolkit();
         Dimension tamanio = pantalla.getScreenSize();
         int altura = tamanio.height;
@@ -25,6 +26,7 @@ public class Ventana extends JFrame {
 
         this.setTitle("ventana " + numero);
         this.setVisible(true);
+
         MouseInputListener l = new MouseInputListener() {
 
             @Override
