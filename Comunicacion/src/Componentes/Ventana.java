@@ -31,19 +31,20 @@ public class Ventana extends JFrame {
 
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
-                System.out.println("Ratón en ventana " + numero);
+            
 
             }
 
             @Override
             public void mousePressed(java.awt.event.MouseEvent e) {
-                // TODO Auto-generated method stub
+                System.out.println("Mouse Pressed en ventana " + numero);
+                
 
             }
 
             @Override
             public void mouseReleased(java.awt.event.MouseEvent e) {
-                // TODO Auto-generated method stub
+                System.out.println("Mouse Released en ventana " + numero);
 
             }
 
