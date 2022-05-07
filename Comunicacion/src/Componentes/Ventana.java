@@ -31,20 +31,22 @@ public class Ventana extends JFrame {
 
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
-            
 
             }
 
             @Override
             public void mousePressed(java.awt.event.MouseEvent e) {
-                System.out.println("Mouse Pressed en ventana " + numero);
-                
+                int x = e.getX();
+                int y = e.getY();
+                System.out.println("Mouse Pressed en ventana " + numero + " | Coordenadas: " + x + "," + y);
 
             }
 
             @Override
             public void mouseReleased(java.awt.event.MouseEvent e) {
-                System.out.println("Mouse Released en ventana " + numero);
+                int x = e.getX();
+                int y = e.getY();
+                System.out.println("Mouse Released en ventana " + numero + " | Coordenadas: " + x + "," + y);
 
             }
 

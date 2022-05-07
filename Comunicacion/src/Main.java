@@ -5,7 +5,7 @@ public class Main {
         Ventana v1 = new Ventana();
         Ventana v2=new Ventana();
         Ventana v3=new Ventana();
-        v2.setTitle("Ventana 2");
+        
         
 
     }
