@@ -2,15 +2,10 @@ package Componentes;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
-
-import javax.annotation.processing.SupportedOptions;
-import javax.sound.sampled.SourceDataLine;
 import javax.swing.JFrame;
 import javax.swing.event.MouseInputListener;
 
-import org.w3c.dom.events.MouseEvent;
-
-public class Ventana extends JFrame{
+public class Ventana extends JFrame {
     static int n = 0;
     int numero;
 
@@ -22,8 +17,8 @@ public class Ventana extends JFrame{
         int altura = tamanio.height;
         int anchura = tamanio.width;
         setSize(anchura / 2, altura / 2);
-        
-        setLocation(100*n,100*n);
+
+        setLocation(100 * n, 100 * n);
 
         this.setTitle("ventana " + numero);
         this.setVisible(true);
