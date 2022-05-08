@@ -2,10 +2,12 @@ package Componentes;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.MouseEvent;
+
 import javax.swing.JFrame;
 import javax.swing.event.MouseInputListener;
 
-public class Ventana extends JFrame {
+public class Ventana extends JFrame implements MouseInputListener {
     static int n = 0;
     int numero;
 
@@ -22,56 +24,50 @@ public class Ventana extends JFrame {
 
         this.setTitle("ventana " + numero);
         this.setVisible(true);
-
-        MouseInputListener l = new MouseInputListener() {
-
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent e) {
-
-            }
-
-            @Override
-            public void mousePressed(java.awt.event.MouseEvent e) {
-                int x = e.getX();
-                int y = e.getY();
-                System.out.println("Mouse Pressed en ventana " + numero + " | Coordenadas: " + x + "," + y);
-
-            }
-
-            @Override
-            public void mouseReleased(java.awt.event.MouseEvent e) {
-                int x = e.getX();
-                int y = e.getY();
-                System.out.println("Mouse Released en ventana " + numero + " | Coordenadas: " + x + "," + y);
-
-            }
-
-            @Override
-            public void mouseEntered(java.awt.event.MouseEvent e) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void mouseExited(java.awt.event.MouseEvent e) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void mouseDragged(java.awt.event.MouseEvent e) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void mouseMoved(java.awt.event.MouseEvent e) {
-                // TODO Auto-generated method stub
-
-            }
-
-        };
-        addMouseListener(l);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        addMouseListener(this);
+
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        System.out.println("Mouse Pressed en ventana " + numero + " en (" + e.getX() + ", " + e.getY() + ")");
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        System.out.println("Mouse Released en ventana " + numero + " en (" + e.getX() + ", " + e.getY() + ")");
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        // TODO Auto-generated method stub
+
     }
 }
